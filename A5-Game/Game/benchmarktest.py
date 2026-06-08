@@ -24,7 +24,7 @@ if QUICK_TEST:
     ROUNDS = 100
 else:
     N_GAMES_PER_MAP = 25
-    ROUNDS = 1000
+    ROUNDS = 200
 
 # -------- maps: files are in the SAME folder as this script --------
 ALL_MAPS = [
@@ -40,14 +40,14 @@ MAPS = [("random", None)] if QUICK_TEST else ALL_MAPS
 
 # -------- bot files: also in same folder --------
 BOT_FILES = {
-    "v5": BASE_DIR / "scout5.py",
-    "v5.2": BASE_DIR / "scoutv5.2.py",
+    "Hannahold": BASE_DIR / "botHannah.py",
+    "v6": BASE_DIR / "v6.py",
     "v5new": BASE_DIR / "scoutnew.py",
-    "botHannah": BASE_DIR / "botHannah.py",
+    "botHannah": BASE_DIR / "Hannah2.py",
     "group2": BASE_DIR / "group2bot.py",
 }
 
-BOT_ORDER = ["v5", "v5.2", "v5new", "botHannah", "group2"]
+BOT_ORDER = ["Hannahold", "v6", "v5new", "botHannah", "group2"]
 
 # -------- checks --------
 missing_bot_files = [str(f) for f in BOT_FILES.values() if not f.exists()]
